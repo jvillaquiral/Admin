@@ -1,0 +1,103 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpPlantillaInicial.master.cs" Inherits="mpPlantillaInicial" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="cssPrincipal.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="text-align: center; vertical-align: top;">
+    <form id="form1" runat="server">
+    <div>
+        <table style="width: 800px; font-weight: bold; font-size: 14px; color: black; font-family: 'Tw Cen MT Condensed', Verdana;" cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3">
+                    <img src="Imagenes/EncabezadoACWEB.jpg" /></td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background-image: url(Imagenes/BarraSuperior.jpg); color: white; text-align: right">
+                    <asp:HyperLink ID="hlkSuTienda" runat="server" ForeColor="White" NavigateUrl="../Default.aspx">Su Tienda</asp:HyperLink>&nbsp;
+                    | &nbsp;
+                    <asp:HyperLink ID="hlkPlataforma" runat="server" ForeColor="White" NavigateUrl="http://www.plataforma-web.com">Plataforma WEB</asp:HyperLink>&nbsp;
+                    | &nbsp;<asp:HyperLink ID="hlkContactenos" runat="server" ForeColor="White" NavigateUrl="http://www.plataforma-web.com/dspContactenos.aspx">Contáctenos</asp:HyperLink>&nbsp; &nbsp;</td>
+            </tr>
+            <tr>
+                <td style="vertical-align: top; height: 430px; background-color: #d0d9e0; text-align: left; width: 120px;">
+                    <table style="width: 120px; border-left-color: white; border-bottom-color: white; border-top-color: white; border-right-color: white; background-color: white;" border="0" cellpadding="0" cellspacing="1">
+                        <tr>
+                            <td style="background-color: #d0d9e0; width: 122px;">
+                                <img src="Imagenes/Enlaces.jpg" /></td>
+                        </tr>
+                        <tr style="font-weight: bold">
+                            <td style="background-color: #d0d9e0; width: 122px; font-weight: normal; font-size: 10px; color: black; font-family: 'Franklin Gothic Heavy'; height: 70px; text-align: center;">
+                                <asp:HyperLink ID="hlkEnlacePW" runat="server" ImageUrl="Imagenes/LogoPlataformaWEB.jpg"
+                                    NavigateUrl="http://www.plataforma-web.com">Plataforma WEB</asp:HyperLink></td>
+                        </tr>
+                        <tr style="font-weight: bold">
+                            <td style="background-color: #d0d9e0; width: 122px; height: 70px; text-align: center;">
+                                <asp:HyperLink ID="hlkEnlaceSE" runat="server" ImageUrl="~/Admin/Imagenes/logoSE.jpg"
+                                    NavigateUrl="http://www.sectorempresarial.com">Sector Empresarial</asp:HyperLink></td>
+                        </tr>
+                        <tr style="font-weight: bold">
+                            <td style="width: 122px; background-color: #d0d9e0">
+                                &nbsp;</td>
+                        </tr>
+                        <tr style="font-weight: bold">
+                            <td style="background-color: #d0d9e0; width: 122px;">
+                                <asp:HyperLink ID="hlkNoticias" runat="server" ImageUrl="~/Admin/Imagenes/Noticias.jpg"
+                                    NavigateUrl="http://www.sectorempresarial.com/dspNoticias.aspx">Plataforma WEB</asp:HyperLink></td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="width: 560px; height: 430px; vertical-align: top; font-weight: bold;">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                </td>
+                <td style="vertical-align: text-top; height: 430px; background-color: #d0d9e0; text-align: right; width: 120px; font-weight: bold;"><table style="width: 120px;" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td style="background-color: #d0d9e0; text-align: left; border-top-width: thin; border-left-width: thin; border-left-color: white; border-bottom-width: thin; border-bottom-color: white; border-top-color: white; border-right-width: thin; border-right-color: white;">
+                            <img src="Imagenes/Usuarios.jpg" /></td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #d0d9e0; text-align: left; height: 120px; border-right: #ffffff thin solid; border-top: #ffffff thin solid; border-left: #ffffff thin solid; border-bottom: #ffffff thin solid;">
+                            &nbsp; &nbsp;&nbsp;&nbsp; Usuario<br />
+                            &nbsp;&nbsp;
+                            <asp:TextBox ID="txtUsuario" runat="server" Font-Names="Verdana" Font-Size="10px" Width="100px"></asp:TextBox><br />
+                            &nbsp;
+                            &nbsp; &nbsp;&nbsp;&nbsp; Clave<br />
+                            &nbsp;&nbsp;
+                            <asp:TextBox ID="txtClave" runat="server" Font-Names="Verdana" Font-Size="10px" Width="100px" TextMode="Password"></asp:TextBox><br />
+                            &nbsp;&nbsp;
+                            <br />
+                            &nbsp;&nbsp;
+                            <asp:Button ID="Button1" runat="server" Font-Names="Verdana" Font-Size="10px" Text="Ingresar" OnClick="btnRegistro_Click" /></td>
+                    </tr>
+                    <tr>
+                        <td style="height: 90px; background-color: #d0d9e0; text-align: right">
+                    <asp:CustomValidator ID="cvlDatosInvalidos" runat="server" Display="None" ErrorMessage="Usuario y clave inválidos"></asp:CustomValidator><asp:CustomValidator ID="cvlClaveInvalida" runat="server" Display="None" ErrorMessage="Clave inválida"></asp:CustomValidator><asp:ValidationSummary ID="ValidationSummary1" runat="server" DisplayMode="List" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold; font-size: 10px; vertical-align: bottom; color: #cc0000;
+                            font-family: Verdana; height: 210px; background-color: #d0d9e0; text-align: right">
+                            &nbsp;<asp:HyperLink ID="hlkEnlacePW2" runat="server" ImageUrl="Imagenes/LogoPlataformaWEB.jpg"
+                                NavigateUrl="http://www.plataforma-web.com">Plataforma WEB</asp:HyperLink>&nbsp;<br />
+                            Teléfono:&nbsp;
+                            &nbsp;
+                            <br />
+                            3164424140&nbsp;
+                        </td>
+                    </tr>
+                </table>
+                </td>
+            </tr>
+            <tr style="font-weight: bold">
+                <td style="height: 30px" colspan="3">
+                    <img src="Imagenes/BarraInferior.jpg" /></td>
+            </tr>
+        </table>
+    </div>
+    </form>
+</body>
+</html>

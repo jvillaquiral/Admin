@@ -1,0 +1,39 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpMenuInterno.master.cs" Inherits="mpMenuInterno" %>
+<link href="cssPrincipal.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div style="text-align: center">
+            <table cellpadding="0" cellspacing="0" style="font-weight: bold; font-size: 14px;
+                width: 800px; color: black; font-family: 'Tw Cen MT Condensed', Verdana">
+                <tr>
+                    <td colspan="3">
+                        <img src="Imagenes/EncabezadoACWEB.jpg" /></td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-image: url(Imagenes/BarraSuperior.jpg)">
+                        </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: middle;
+                        text-align: center; height: 430px;" colspan="3">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="height: 30px">
+                        <img src="Imagenes/BarraInferior.jpg" /></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

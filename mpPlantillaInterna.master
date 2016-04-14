@@ -1,0 +1,111 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="mpPlantillaInterna.master.cs" Inherits="mpPlantillaInterna" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head runat="server">
+    <title>Untitled Page</title>
+    <link href="cssPrincipal.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div>
+            <div style="text-align: center">
+                <table cellpadding="0" cellspacing="0" style="font-weight: bold; font-size: 14px;
+                    width: 800px; color: black; font-family: 'Tw Cen MT Condensed', Verdana">
+                    <tr>
+                        <td colspan="3">
+                            <img src="Imagenes/EncabezadoACWEB.jpg" /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="background-image: url(Imagenes/BarraSuperior.jpg); color: white; text-align: right">
+                            <asp:HyperLink ID="hlkSuTienda" runat="server" ForeColor="White" NavigateUrl="../Default.aspx" Target="_blank">Su Tienda</asp:HyperLink>&nbsp;
+                            | &nbsp;
+                            <asp:HyperLink ID="hlkPlataforma" runat="server" ForeColor="White" NavigateUrl="http://www.plataforma-web.com" Target="_blank">Plataforma WEB</asp:HyperLink>&nbsp;
+                            | &nbsp;<asp:HyperLink ID="hlkContactenos" runat="server" ForeColor="White" NavigateUrl="http://www.plataforma-web.com/dspContactenos.aspx" Target="_blank">Contáctenos</asp:HyperLink>&nbsp; &nbsp;| &nbsp;<asp:HyperLink ID="hlkMenuPpal" runat="server" ForeColor="White" NavigateUrl="~/Admin/dspMenuPrincipal.aspx">Menú Principal</asp:HyperLink>
+                            &nbsp;| &nbsp;<asp:LinkButton ID="lbtSalir" runat="server" ForeColor="White" OnClick="lbtSalir_Click">Salir</asp:LinkButton>
+                            &nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top; width: 120px; height: 430px; background-color: #d0d9e0;
+                            text-align: left">
+                            <table border="0" cellpadding="0" cellspacing="1" style="border-left-color: white;
+                                border-bottom-color: white; width: 120px; border-top-color: white; background-color: white;
+                                text-decoration: none; border-right-color: white">
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <img src="Imagenes/Men_Productos.jpg" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Admin/lstProductos.aspx" CssClass="menu">Listado</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="~/Admin/bsqProductos.aspx" CssClass="menu">Consulta</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Admin/dspProductos.aspx" CssClass="menu">Nuevo</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink11" runat="server" NavigateUrl="~/Admin/lstCantidadesPrecios.aspx" CssClass="menu">Cantidades y Precios</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <img src="Imagenes/Men_Pedidos.jpg" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0; height: 16px;">
+                                        <asp:HyperLink ID="HyperLink7" runat="server" NavigateUrl="~/Admin/lstPedidos.aspx" CssClass="menu">Listado</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0; height: 16px;">
+                                        <asp:HyperLink ID="HyperLink12" runat="server" NavigateUrl="~/Admin/bsqPedidos.aspx" CssClass="menu">Consulta</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; height: 16px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink19" runat="server" CssClass="menu" NavigateUrl="~/Admin/lstCostosEnvio.aspx">Costos de Envío</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <img src="Imagenes/Men_Clientes.jpg" /></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink13" runat="server" NavigateUrl="~/Admin/lstClientes.aspx" CssClass="menu">Listado</asp:HyperLink></td>
+                                </tr>
+                                <tr>
+                                    <td style="width: 122px; background-color: #d0d9e0">
+                                        <asp:HyperLink ID="HyperLink14" runat="server" NavigateUrl="~/Admin/bsqClientes.aspx" CssClass="menu">Consulta</asp:HyperLink></td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td style="vertical-align: top; width: 560px; height: 430px">
+        <asp:contentplaceholder id="ContentPlaceHolder1" runat="server">
+        </asp:contentplaceholder>
+                        </td>
+                        <td style="vertical-align: text-top; width: 120px; height: 430px; background-color: #d0d9e0;
+                            text-align: right">
+                            <table border="0" cellpadding="0" cellspacing="1" style="width: 120px; background-color: white">
+                                <tr>
+                                    <td style="height: 25px; background-color: #d0d9e0; text-align: left">
+                                        <img src="Imagenes/Noticias.jpg" /></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="height: 30px">
+                            <img src="Imagenes/BarraInferior.jpg" /></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>
